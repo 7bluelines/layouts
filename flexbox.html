@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/reset.css" type="text/css" />
+    <link rel="stylesheet" href="styles/main.css" type="text/css" />
+    <link rel="stylesheet" href="styles/flexbox.css" type="text/css" />
+    <script type="text/javascript" src="scripts/flexbox.js" defer></script>
+    <title>CSS Layouts</title>
+  </head>
+  <body>
+    <header>
+      <nav class="main-nav">
+        <ul class="main-nav-li">
+          <li>Home</li>
+          <li>Position</li>
+          <li>Flexbox</li>
+          <li>Grid</li>
+        </ul>
+      </nav>
+      <h1>Flexbox</h1>
+    </header>
+
+    <main class="container">
+      <section class="main-section">
+        <div class="main-window" id="main-window">
+          <div id="element1" class="element"><p>1</p></div>
+          <div id="element2" class="element"><p>2</p></div>
+          <div id="element3" class="element"><p>3</p></div>
+          <div id="element4" class="element"><p>4</p></div>
+          <div id="element5" class="element"><p>5</p></div>
+          <div id="element6" class="element"><p>6</p></div>
+          <div id="element7" class="element"><p>7</p></div>
+          <div id="element8" class="element"><p>8</p></div>
+        </div>
+      </section>
+      <aside class="properties">
+        <div>
+          <h2 class="prop-main-header">Properties</h2>
+          <div class="container-prop">
+            <h3 class="prop-sub-header">Container</h3>
+            <label for="flex-direction" class="label">flex-direction</label>
+            <select name="flex-direction" id="flex-direction" class="property">
+              <option value="row">row</option>
+              <option value="row-reverse">row-reverse</option>
+              <option value="column">column</option>
+              <option value="column-reverse">column-reverse</option>
+            </select>
+          </div>
+          <div></div>
+        </div>
+
+
+        <ul>
+          <li class="prop-main-header">Properties</li>
+          <li class="prop-sub-header">Container</li>
+          <li class="property">flex-direction</li>
+          <li class="property">flex-wrap</li>
+          <li class="property">flex-flow</li>
+          <li class="property">justify-content</li>
+          <li class="property">align-items</li>
+          <li class="property">align-content</li>
+          <li class="prop-sub-header">Items</li>
+          <li class="property">order</li>
+          <li class="property">flex-grow</li>
+          <li class="property">flex-shrink</li>
+          <li class="property">flex-basis</li>
+          <li class="property">flex</li>
+          <li class="property">align-self</li>
+          <button onclick="changeProperty()" class="button">Try</button>
+        </ul>
+      </aside>
+      <aside class="css-editor"><p>CSS EDITOR</p></aside>
+    </main>
+  </body>
+</html>
