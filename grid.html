@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/reset.css" type="text/css" />
+    <link rel="stylesheet" href="styles/main.css" type="text/css" />
+    <link rel="stylesheet" href="styles/flexbox.css" type="text/css" />
+    <script type="text/javascript" src="scripts/flexbox.js" defer></script>
+    <title>CSS Layouts</title>
+  </head>
+  <body>
+    <header>
+      <nav class="main-nav">
+        <ul class="main-nav-li">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="position.html">Position</a></li>
+          <li><a href="flexbox.html">Flexbox</a></li>
+          <li>Grid</li>
+        </ul>
+      </nav>
+      <h1>Flexbox</h1>
+    </header>
+
+    <main class="main-container">
+      <section class="main-section">
+        <div class="main-window" id="flex-main-window">
+          <div id="item01" class="item"><p>01</p></div>
+          <div id="item02" class="item"><p>02</p></div>
+          <div id="item03" class="item"><p>03</p></div>
+          <div id="item04" class="item"><p>04</p></div>
+          <div id="item05" class="item"><p>05</p></div>
+          <div id="item06" class="item"><p>06</p></div>
+          <div id="item07" class="item"><p>07</p></div>
+          <div id="item08" class="item"><p>08</p></div>
+          <div id="item09" class="item"><p>09</p></div>
+          <div id="item10" class="item"><p>10</p></div>
+          <div id="item11" class="item"><p>11</p></div>
+          <div id="item12" class="item"><p>12</p></div>
+          <div id="item13" class="item"><p>13</p></div>
+          <div id="item14" class="item"><p>14</p></div>
+          <div id="item15" class="item"><p>15</p></div>
+          <div id="item16" class="item"><p>16</p></div>
+        </div>
+      </section>
+      <aside class="properties prop-container">
+        <div class="container">
+          <h2 class="prop-main-header">Container</h2>
+          <!-- <div class="container-setup">
+            <h2 class="prop-main-header">Container</h2>
+            <div class="container-height">
+              <h3>Dimension</h3>
+              <div class="inline-input">
+                <label title="Sets the heigth of the container in px, value ranges 1 - 2000." for="container-heigth"><span>heigth *=</span></label>
+                <input type="number" name="container-heigth" id="container-heigth" min="1" max="2000" step="1">
+              </div>
+              <div class="inline-input">
+                <label title="Sets the width of the container in px, value ranges 1 - 2000." for="container-width"><span>width *=</span></label>
+                <input type="number" name="container-width" id="container-width" min="1" max="2000" step="1">
+              </div>
+              <button onclick="" class="button submit">Go</button>
+            </div>
+          </div> -->
+          <div class="container-prop">
+            <h3 class="prop-sub-header">Properties</h3>
+            <label title="Controls the direction in which the items in the container display." for="flex-direction" class="label">flex-direction</label>
+            <select name="flex-direction" id="flex-direction" class="property">
+              <option title="left to right in ltr; right to left in rtl" value="row">row (default)</option>
+              <option title="right to left in ltr; left to right in rtl" value="row-reverse">row-reverse</option>
+              <option title="top to bottom in ltr; bottom to top in rtl" value="column">column</option>
+              <option title="bottom to top in ltr; top to bottom in rtl" value="column-reverse">column-reverse</option>
+            </select>
+            <label title="Sets whether flex items are forced onto one line or can wrap onto multiple lines." for="flex-wrap" class="label">flex-wrap</label>
+            <select name="flex-wrap" id="flex-wrap" class="property">
+              <option title="items are laid out in a single line" value="nowrap">nowrap (default)</option>
+              <option title="items break into multiple lines" value="wrap">wrap</option>
+              <option title="items break into multiple lines but cross-start and cross-end are permuted" value="wrap-reverse">column</option>
+            </select>
+            <label title="Shorthand for the flex-direction and flex-wrap." for="flex-flow" class="label">flex-flow</label>
+            <select name="flex-flow" id="flex-flow" class="property">
+            </select>
+
+          <label title="Sets whether flex items are forced onto one line or can wrap onto multiple lines." for="justify-content" class="label">justify-content</label>
+          <select name="justify-content" id="justify-content" class="property">
+            <option title="items are packed toward the start of the flex-direction" value="flex-start">flex-start (default)</option>
+            <option title="items are packed toward the end of the flex-direction" value="flex-end">flex-end</option>
+            <option title="items are packed toward the start of the writing-mode direction" value="start">start</option>
+            <option title="items are packed toward the end of the writing-mode direction" value="end">end</option>
+            <option title="items are packed toward left edge of the container, unless that doesn’t make sense with the flex-direction, then it behaves like start" value="left">left</option>
+            <option title="items are packed toward right edge of the container, unless that doesn’t make sense with the flex-direction, then it behaves like end" value="right">right</option>
+            <option title="items are packed flush to each other toward the center of the alignment container along the main axis" value="center">center</option>
+            <option title="items are evenly distributed in the line; first item is on the start line, last item on the end line" value="space-between">space-between</option>
+            <option title="items are evenly distributed in the line with equal space around them" value="space-around">space-around</option>
+            <option title="items are distributed so that the spacing between any two items (and the space to the edges) is equal" value="space-evenly">space-evenly</option>
+          </select>
+          <label title="Controls the direction in which the items in the container display." for="align-items" class="label">align-items</label>
+            <select name="align-items" id="align-items" class="property">
+              <option title="stretch to fill the container (still respect min-width/max-width)" value="stretch">stretch (default)</option>
+              <option title="flex-start / start / self-start: items are placed at the start of the cross axis. The difference between these is subtle, and is about respecting the flex-direction rules or the writing-mode rules. We work with flex-start." value="flex-start">flex-start</option>
+              <option title="flex-end / end / self-end: items are placed at the end of the cross axis. The difference again is subtle and is about respecting flex-direction rules vs. writing-mode rules. We work with flex-end." value="flex-end">flex-end</option>
+              <option title="items are centered in the cross-axis" value="center">center</option>
+              <option title="items are aligned such as their baselines align" value="baseline">baseline</option>
+            </select>
+          <label title="Controls the direction in which the items in the container display." for="align-content" class="label">align-content</label>
+            <select name="align-content" id="align-content" class="property">
+              <option title="items are packed in their default position as if no value was set" value="normal">normal (default)</option>
+              <option title="flex-start / start: items packed to the start of the container. The flex-start honors the flex-direction while start honors the writing-mode direction. We work with flex-start." value="flex-start">flex-start</option>
+              <option title="flex-end / end: items packed to the end of the container. The flex-end honors the flex-direction while end honors the writing-mode direction. We work with flex-end." value="flex-end">flex-end</option>
+              <option title="items centered in the container" value="center">center</option>
+              <option title="items evenly distributed; the first line is at the start of the container while the last one is at the end" value="space-between">space-between (default)</option>
+              <option title="items evenly distributed with equal space around each line" value="space-around">space-around</option>
+              <option title="items are evenly distributed with equal space around them" value="space-evenly">space-evenly</option>
+              <option title="lines stretch to take up the remaining space" value="stretch">stretch</option>
+            </select>
+          <div class="gap">
+            <div class="inline-input">
+              <label title="controls the space between flex items" for="gap"><span>gap: </span></label>
+                  <input type="number" name="gap" id="gap" min="0.1" max="5" step=".1">
+                  <span>px</span>
+            </div>
+            <div class="inline-input">
+              <label title="controls the space between the rows of flex items" for="row-gap"><span>row-gap: </span></label>
+                  <input type="number" name="row-gap" id="row-gap" min="0.1" max="5" step=".1">
+                  <span>px</span>
+            </div>
+            <div class="inline-input">
+              <label title="controls the space between the columns of flex items" for="column-gap"><span>column-gap: </span></label>
+                  <input type="number" name="column-gap" id="column-gap" min="0.1" max="5" step=".1">
+                  <span>px</span>
+            </div>
+            </div>
+          </div>
+          <button onclick="changeProperty()" class="button submit">Go</button>
+          <div class="container-setup">
+            
+            <div class="container-height">
+              <h3>Dimension</h3>
+              <div class="inline-input">
+                <label title="Sets the heigth of the container in px, value ranges 1 - 2000." for="container-heigth"><span>heigth:</span></label>
+                <input type="number" name="container-heigth" id="container-heigth" min="1" max="2000" step="1">
+                <span>px</span>
+              </div>
+              <div class="inline-input">
+                <label title="Sets the width of the container in px, value ranges 1 - 2000." for="container-width"><span>width:</span></label>
+                <input type="number" name="container-width" id="container-width" min="1" max="2000" step="1">
+                <span>px</span>
+              </div>
+              <button onclick="" class="button submit">Go</button>
+            </div>
+          </div>
+        </div>
+      </aside>
+      <aside class="properties prop-items">
+        <div class="items">
+          <h2 class="prop-main-header">Items</h2>
+          <div class="items-setup">
+            <div class="avatar-window" id="">
+              <div id="avitem1" class="avitem"><p>01</p></div>
+              <div id="avitem2" class="avitem"><p>02</p></div>
+              <div id="avitem3" class="avitem"><p>03</p></div>
+              <div id="avitem4" class="avitem"><p>04</p></div>
+              <div id="avitem5" class="avitem"><p>05</p></div>
+              <div id="avitem6" class="avitem"><p>06</p></div>
+              <div id="avitem7" class="avitem"><p>07</p></div>
+              <div id="avitem8" class="avitem"><p>08</p></div>
+              <div id="avitem9" class="avitem"><p>09</p></div>
+              <div id="avitem10" class="avitem"><p>10</p></div>
+              <div id="avitem11" class="avitem"><p>11</p></div>
+              <div id="avitem12" class="avitem"><p>12</p></div>
+              <div id="avitem13" class="avitem"><p>13</p></div>
+              <div id="avitem14" class="avitem"><p>14</p></div>
+              <div id="avitem15" class="avitem"><p>15</p></div>
+              <div id="avitem16" class="avitem"><p>16</p></div>
+            </div>
+          </div>
+          <div class="items-prop">
+            <h3 class="prop-sub-header">Properties</h3>
+          </div>
+        </div>
+        
+
+
+        <ul>
+        <li class="property">order</li>
+        <li class="property">flex-grow</li>
+        <li class="property">flex-shrink</li>
+        <li class="property">flex-basis</li>
+        <li class="property">flex</li>
+        <li class="property">align-self</li>
+        
+      </ul>
+    </aside>
+    </main>
+    <footer>
+      
+      <div id="test"><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Necessitatibus sapiente a ad eaque! Ipsa laudantium, voluptate temporibus ipsum ea debitis dolore commodi molestias aliquam corrupti atque culpa dolorum esse earum et voluptates, ipsam omnis. Suscipit, veritatis, minima itaque qui quia rerum iste ducimus saepe earum voluptas dignissimos consequuntur, debitis magni?</p></div>
+    </footer>
+  </body>
+</html>

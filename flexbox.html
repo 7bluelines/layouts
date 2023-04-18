@@ -14,65 +14,303 @@
     <header>
       <nav class="main-nav">
         <ul class="main-nav-li">
-          <li>Home</li>
-          <li>Position</li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="position.html">Position</a></li>
           <li>Flexbox</li>
-          <li>Grid</li>
+          <li><a href="grid.html">Grid</a></li>
         </ul>
       </nav>
-      <h1>Flexbox</h1>
+      <!-- <h1>Flexbox</h1> -->
     </header>
 
-    <main class="container">
+    <main class="main-container">
       <section class="main-section">
-        <div class="main-window" id="main-window">
-          <div id="element1" class="element"><p>1</p></div>
-          <div id="element2" class="element"><p>2</p></div>
-          <div id="element3" class="element"><p>3</p></div>
-          <div id="element4" class="element"><p>4</p></div>
-          <div id="element5" class="element"><p>5</p></div>
-          <div id="element6" class="element"><p>6</p></div>
-          <div id="element7" class="element"><p>7</p></div>
-          <div id="element8" class="element"><p>8</p></div>
+        <div class="banner"><h1>flexbox</h1></div>
+        <div class="frame" id="frame">
+          <div class="main-window" id="flex-main-window">
+            <div id="item01" class="item"><p>01</p></div>
+            <div id="item02" class="item"><p>02</p></div>
+            <div id="item03" class="item"><p>03</p></div>
+            <div id="item04" class="item"><p>04</p></div>
+            <div id="item05" class="item"><p>05</p></div>
+            <div id="item06" class="item"><p>06</p></div>
+            <div id="item07" class="item"><p>07</p></div>
+            <div id="item08" class="item"><p>08</p></div>
+            <div id="item09" class="item"><p>09</p></div>
+            <div id="item10" class="item"><p>10</p></div>
+            <div id="item11" class="item"><p>11</p></div>
+            <div id="item12" class="item"><p>12</p></div>
+            <div id="item13" class="item"><p>13</p></div>
+            <div id="item14" class="item"><p>14</p></div>
+            <div id="item15" class="item"><p>15</p></div>
+            <div id="item16" class="item"><p>16</p></div>
+          </div>
         </div>
       </section>
-      <aside class="properties">
-        <div>
-          <h2 class="prop-main-header">Properties</h2>
+      <aside class="properties prop-container">
+        <div class="container">
+          <h2 class="prop-main-header">Container</h2>
           <div class="container-prop">
-            <h3 class="prop-sub-header">Container</h3>
-            <label for="flex-direction" class="label">flex-direction</label>
-            <select name="flex-direction" id="flex-direction" class="property">
-              <option value="row">row</option>
-              <option value="row-reverse">row-reverse</option>
-              <option value="column">column</option>
-              <option value="column-reverse">column-reverse</option>
-            </select>
+            <h3 class="prop-sub-header">Properties</h3>
+            <fieldset>
+              <div>
+                <legend title="Shorthands are not working currently.">Show shorthands</legend>
+              </div>
+              <div class="show-shorthand">
+                <label for="cont-sh"></label>
+                <input type="checkbox" name="cont-sh" id="cont-sh">
+              </div>
+              <div  class="button-pos-end">
+                <button onclick="" class="button submit">Go</button>
+              </div>
+            </fieldset>
+            <table class="table-cont">
+              <tr>
+                <td class="table-cont-prop">
+                  <label title="Controls the direction in which the items in the container display." for="flex-direction" class="label">flex-direction</label>
+                </td>
+              </tr>
+              <tr>  
+                <td>  
+                  <select name="flex-direction" id="flex-direction" class="property">
+                    <option title="left to right in ltr; right to left in rtl" value="row">row (default)</option>
+                    <option title="right to left in ltr; left to right in rtl" value="row-reverse">row-reverse</option>
+                    <option title="top to bottom in ltr; bottom to top in rtl" value="column">column</option>
+                    <option title="bottom to top in ltr; top to bottom in rtl" value="column-reverse">column-reverse</option>
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <td class="table-cont-prop">
+                  <label title="Sets whether flex items are forced onto one line or can wrap onto multiple lines." for="flex-wrap" class="label">flex-wrap</label>
+                </td>
+              </tr>
+              <tr>
+                <td>    
+                  <select name="flex-wrap" id="flex-wrap" class="property">
+                    <option title="items are laid out in a single line" value="nowrap">nowrap (default)</option>
+                    <option title="items break into multiple lines" value="wrap">wrap</option>
+                    <option title="items break into multiple lines but cross-start and cross-end are permuted" value="wrap-reverse">column</option>
+                  </select>
+                </td>
+              </tr>
+              <tr class="shorthand-row">
+                <td class="shorthand-cell table-cont-prop">
+                  <label title="Shorthand for the flex-direction and flex-wrap." for="flex-flow" class="label">flex-flow</label>
+                </td>
+              </tr>
+              <tr>
+                <td>    
+                  <select name="flex-flow" id="flex-flow" class="property shorthand-input">
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <td class="table-cont-prop">
+                  <label title="Sets whether flex items are forced onto one line or can wrap onto multiple lines." for="justify-content" class="label">justify-content</label>
+                </td>
+              </tr>
+              <tr>
+                <td>    
+                  <select name="justify-content" id="justify-content" class="property">
+                    <option title="items are packed toward the start of the flex-direction" value="flex-start">flex-start (default)</option>
+                    <option title="items are packed toward the end of the flex-direction" value="flex-end">flex-end</option>
+                    <option title="items are packed toward the start of the writing-mode direction" value="start">start</option>
+                    <option title="items are packed toward the end of the writing-mode direction" value="end">end</option>
+                    <option title="items are packed toward left edge of the container, unless that doesn’t make sense with the flex-direction, then it behaves like start" value="left">left</option>
+                    <option title="items are packed toward right edge of the container, unless that doesn’t make sense with the flex-direction, then it behaves like end" value="right">right</option>
+                    <option title="items are packed flush to each other toward the center of the alignment container along the main axis" value="center">center</option>
+                    <option title="items are evenly distributed in the line; first item is on the start line, last item on the end line" value="space-between">space-between</option>
+                    <option title="items are evenly distributed in the line with equal space around them" value="space-around">space-around</option>
+                    <option title="items are distributed so that the spacing between any two items (and the space to the edges) is equal" value="space-evenly">space-evenly</option>
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <td class="table-cont-prop">
+                  <label title="Controls the direction in which the items in the container display." for="align-items" class="label">align-items</label>
+                </td>
+              </tr>
+              <tr>
+                <td>    
+                  <select name="align-items" id="align-items" class="property">
+                    <option title="stretch to fill the container (still respect min-width/max-width)" value="stretch">stretch (default)</option>
+                    <option title="flex-start / start / self-start: items are placed at the start of the cross axis. The difference between these is subtle, and is about respecting the flex-direction rules or the writing-mode rules. We work with flex-start." value="flex-start">flex-start</option>
+                    <option title="flex-end / end / self-end: items are placed at the end of the cross axis. The difference again is subtle and is about respecting flex-direction rules vs. writing-mode rules. We work with flex-end." value="flex-end">flex-end</option>
+                    <option title="items are centered in the cross-axis" value="center">center</option>
+                    <option title="items are aligned such as their baselines align" value="baseline">baseline</option>
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <td class="table-cont-prop">
+                  <label title="Controls the direction in which the items in the container display." for="align-content" class="label">align-content</label>
+                </td>
+              </tr>
+              <tr>
+                <td>    
+                  <select name="align-content" id="align-content" class="property">
+                    <option title="items are packed in their default position as if no value was set" value="normal">normal (default)</option>
+                    <option title="flex-start / start: items packed to the start of the container. The flex-start honors the flex-direction while start honors the writing-mode direction. We work with flex-start." value="flex-start">flex-start</option>
+                    <option title="flex-end / end: items packed to the end of the container. The flex-end honors the flex-direction while end honors the writing-mode direction. We work with flex-end." value="flex-end">flex-end</option>
+                    <option title="items centered in the container" value="center">center</option>
+                    <option title="items evenly distributed; the first line is at the start of the container while the last one is at the end" value="space-between">space-between</option>
+                    <option title="items evenly distributed with equal space around each line" value="space-around">space-around</option>
+                    <option title="items are evenly distributed with equal space around them" value="space-evenly">space-evenly</option>
+                    <option title="lines stretch to take up the remaining space" value="stretch">stretch</option>
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <td class="button-pos-mid"><button onclick="changeProperty()" class="button submit">Go</button></td>
+              </tr>
+            </table>
+          <div class="gap">
+            <table>
+                <tr>
+                  <td><label title="controls the space between flex items" for="gap"><span>gap: </span></label></td>
+                  <td><input type="number" name="gap" id="gap" min="0.1" max="5" step=".1"></td>
+                  <td><span>px</span></td>
+                </tr>
+                <tr>
+                  <td><label title="controls the space between the rows of flex items" for="row-gap"><span>row-gap: </span></label></td>
+                  <td><input type="number" name="row-gap" id="row-gap" min="0.1" max="5" step=".1"></td>
+                  <td><span>px</span></td>
+                </tr>
+                <tr>
+                  <td><label title="controls the space between the columns of flex items" for="column-gap"><span>column-<br>gap: </span></label></td>
+                  <td><input type="number" name="column-gap" id="column-gap" min="0.1" max="5" step=".1"></td>
+                  <td><span>px</span></td>
+                </tr>
+                <tr>
+                  <td class="button-pos-mid"><button onclick="" class="button submit">Go</button></td>
+                </tr>
+            </table>
+            </div>
           </div>
-          <div></div>
+          <div class="container-setup">
+            <div class="container-dimension">
+              <h3>Dimension</h3>
+              <table>
+                  <tr>
+                    <td><label title="Sets the heigth of the container in px, value ranges 1 - 2000." for="container-heigth"><span>heigth:</span></label></td>
+                    <td><input type="number" name="container-heigth" id="container-heigth" min="1" max="2000" step="1"></td>
+                    <td><span>px</span></td>
+                  </tr>
+                  <tr>
+                    <td><label title="Sets the width of the container in px, value ranges 1 - 2000." for="container-width"><span>width:</span></label></td>
+                    <td><input type="number" name="container-width" id="container-width" min="1" max="2000" step="1"></td>
+                    <td><span>px</span></td>
+                  </tr>
+                  <tr>
+                    <td class="button-pos-mid"><button onclick="" class="button submit">Go</button></td>
+                  </tr>
+              </table>
+            </div>
+          </div>
         </div>
-
-
-        <ul>
-          <li class="prop-main-header">Properties</li>
-          <li class="prop-sub-header">Container</li>
-          <li class="property">flex-direction</li>
-          <li class="property">flex-wrap</li>
-          <li class="property">flex-flow</li>
-          <li class="property">justify-content</li>
-          <li class="property">align-items</li>
-          <li class="property">align-content</li>
-          <li class="prop-sub-header">Items</li>
-          <li class="property">order</li>
-          <li class="property">flex-grow</li>
-          <li class="property">flex-shrink</li>
-          <li class="property">flex-basis</li>
-          <li class="property">flex</li>
-          <li class="property">align-self</li>
-          <button onclick="changeProperty()" class="button">Try</button>
-        </ul>
       </aside>
-      <aside class="css-editor"><p>CSS EDITOR</p></aside>
+      <aside class="properties prop-items">
+        <div class="items">
+          <h2 class="prop-main-header">Items</h2>
+          <div class="items-setup">
+            <h4>Add Items</h4>
+            <div class="add-item">
+              <button onclick="addItem(this.innerHTML)" class="button item-button">01</button>
+              <button onclick="addItem(this.innerHTML)" class="button item-button">02</button>
+              <button onclick="addItem(this.innerHTML)" class="button item-button">03</button>
+              <button onclick="addItem(this.innerHTML)" class="button item-button">04</button>
+              <button onclick="addItem(this.innerHTML)" class="button item-button">05</button>
+              <button onclick="addItem(this.innerHTML)" class="button item-button">06</button>
+              <button onclick="addItem(this.innerHTML)" class="button item-button">07</button>
+              <button onclick="addItem(this.innerHTML)" class="button item-button">08</button>
+              <button onclick="addItem(this.innerHTML)" class="button item-button">09</button>
+              <button onclick="addItem(this.innerHTML)" class="button item-button">10</button>
+              <button onclick="addItem(this.innerHTML)" class="button item-button">11</button>
+              <button onclick="addItem(this.innerHTML)" class="button item-button">12</button>
+              <button onclick="addItem(this.innerHTML)" class="button item-button">13</button>
+              <button onclick="addItem(this.innerHTML)" class="button item-button">14</button>
+              <button onclick="addItem(this.innerHTML)" class="button item-button">15</button>
+              <button onclick="addItem(this.innerHTML)" class="button item-button">16</button>
+            </div>
+            <h4>Select Items</h4>
+            <div class="avatar-window" id="">
+              <div id="avitem01" class="avitem"><p>01</p></div>
+              <div id="avitem02" class="avitem"><p>02</p></div>
+              <div id="avitem03" class="avitem"><p>03</p></div>
+              <div id="avitem04" class="avitem"><p>04</p></div>
+              <div id="avitem05" class="avitem"><p>05</p></div>
+              <div id="avitem06" class="avitem"><p>06</p></div>
+              <div id="avitem07" class="avitem"><p>07</p></div>
+              <div id="avitem08" class="avitem"><p>08</p></div>
+              <div id="avitem09" class="avitem"><p>09</p></div>
+              <div id="avitem10" class="avitem"><p>10</p></div>
+              <div id="avitem11" class="avitem"><p>11</p></div>
+              <div id="avitem12" class="avitem"><p>12</p></div>
+              <div id="avitem13" class="avitem"><p>13</p></div>
+              <div id="avitem14" class="avitem"><p>14</p></div>
+              <div id="avitem15" class="avitem"><p>15</p></div>
+              <div id="avitem16" class="avitem"><p>16</p></div>
+            </div>
+          </div>
+          <div class="items-prop">
+            <h3 class="prop-sub-header">Properties</h3>
+            <fieldset>
+              <div>
+                <legend title="Shorthands are not working currently.">Show shorthands</legend>
+              </div>
+              <div class="show-shorthand">
+                <label for="item-sh"></label>
+                <input type="checkbox" name="item-sh" id="item-sh">
+              </div>
+              <div class="button-pos-end">
+                <button onclick="" class="button submit">Go</button>
+              </div>
+            </fieldset>
+            <table class="property">
+              <tr>
+                  <td><label title="specifies the order of the flex items" for="order"><span>order</span></label></td>
+                  <td><input type="number" name="order" id="order" min="0" max="16" step="1"></td>
+              </tr>
+                <tr>
+                  <td><label title="specifies how much a flex item will grow relative to the rest of the flex items" for="flex-grow"><span>flex-grow</span></label></td>
+                  <td><input type="number" name="flex-grow" id="flex-grow" min="0" max="99" step="1"></td>
+                </tr>
+                <tr>
+                  <td><label title="specifies how much a flex item will shrink relative to the rest of the flex items" for="flex-shrink"><span>flex-shrink</span></label></td>
+                  <td><input type="number" name="flex-shrink" id="flex-shrink" min="0" max="99" step="1"></td>
+                </tr>
+                <tr>
+                  <td><label title="specifies the initial length of a flex item" for="flex-basis"><span>flex-basis</span></label></td>
+                  <td><input type="number" name="flex-basis" id="flex-basis" min="0" max="99" step="1"></td>
+                </tr>
+                <tr class="shorthand-row">
+                  <td class="shorthand-cell"><label title="shorthand property for the flex-grow, flex-shrink, and flex-basis properties" for="flex"><span>flex</span></label></td>
+                  <td><input type="number" name="flex" id="flex" min="" max="" step="" class="shorthand-input"></td>
+                </tr>
+                <tr>
+                  <td><label title="Specifies the alignment in the block direction for the selected item, overriding the align-items property." for="align-self" class="label">align-self</label></td>
+                  <td>
+                    <select name="align-self" id="align-self" class="property">
+                      <option title="the element inherits its parent container's align-items property, or 'stretch' if it has no parent container" value="auto">auto (default)</option>
+                      <option title="the element is positioned to fit the container" value="stretch">stretch</option>
+                      <option title="the element is positioned at the center of the container" value="center">center</option>
+                      <option title="the element is positioned at the beginning of the container" value="flex-start">flex-start</option>
+                      <option title="the element is positioned at the end of the container" value="flex-end">flex-end</option>
+                      <option title="the element is positioned at the baseline of the container" value="baseline">baseline</option>
+                    </select>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="button-pos-mid"><button onclick="" class="button submit">Go</button></td>
+                </tr>
+            </table>
+          </div>
+        </div>
+      </aside>
     </main>
+    <footer>
+      <div id="test"><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Necessitatibus sapiente a ad eaque! Ipsa laudantium, voluptate temporibus ipsum ea debitis dolore commodi molestias aliquam corrupti atque culpa dolorum esse earum et voluptates, ipsam omnis. Suscipit, veritatis, minima itaque qui quia rerum iste ducimus saepe earum voluptas dignissimos consequuntur, debitis magni?</p></div>
+    </footer>
   </body>
 </html>
